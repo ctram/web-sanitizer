@@ -5,20 +5,20 @@
   "description": "Web sanitizer",
   "permissions": ["activeTab"],
   "action": {
-    "default_popup": "popup.html",
+    "default_popup": "src/popup.html",
     "default_icon": {
-      "16": "./assets/images/dog1.jpg",
-      "48": "./assets/images/dog2.png",
-      "128": "./assets/images/dog3.jpg"
+      "16": "src/assets/images/dog1.jpg",
+      "48": "src/assets/images/dog2.png",
+      "128": "src/assets/images/dog3.jpg"
     }
   },
   "background": {
-    "service_worker": "scripts/background.js"
+    "service_worker": "src/scripts/background.js"
   },
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
-      "js": ["scripts/content.js"]
+      "js": ["src/scripts/content.js"]
     }
   ]
 }
