@@ -7,18 +7,18 @@
   "action": {
     "default_popup": "popup.html",
     "default_icon": {
-      "16": "images/icon16.png",
-      "48": "images/icon48.png",
-      "128": "images/icon128.png"
+      "16": "./assets/images/dog1.jpg",
+      "48": "./assets/images/dog2.png",
+      "128": "./assets/images/dog3.jpg"
     }
   },
   "background": {
-    "service_worker": "background.js"
+    "service_worker": "scripts/background.js"
   },
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
-      "js": ["content.js"]
+      "js": ["scripts/content.js"]
     }
   ]
 }
