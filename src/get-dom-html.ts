@@ -17,12 +17,7 @@ function prettifyHtml(html: string): string {
   return formatted.substring(1);
 }
 
-export function logEntireDom(): void {
-  const entireDom = document.documentElement.outerHTML;
-
-  console.log("Entire DOM content:");
-  console.log(entireDom);
-
-  console.log("Formatted DOM content:");
-  console.log(prettifyHtml(entireDom));
+export function getDomHtml(): string {
+  const domHtml = document.documentElement.outerHTML;
+  return prettifyHtml(domHtml)
 }

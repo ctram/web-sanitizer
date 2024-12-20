@@ -1,11 +1,8 @@
-import { logEntireDom } from "./log-dom";
-
+import { getDomHtml } from "./get-dom-html";
+import { sanitize } from "./sanitize";
+import { updateDom } from "./update-dom";
 
 document.addEventListener("DOMContentLoaded", function () {
-  console.log('before logEntireDom')
-  logEntireDom()
-  console.log('after logEntireDom')
-  
   var button = document.getElementById("myButton");
   button!.addEventListener("click", function () {
     chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
@@ -13,4 +10,4 @@ document.addEventListener("DOMContentLoaded", function () {
       chrome.tabs.sendMessage(tabId, { action: "greet" });
     });
   });
-});
+}); //
