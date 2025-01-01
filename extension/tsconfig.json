@@ -4,8 +4,8 @@
     "module": "es6",
     "strict": true,
     "esModuleInterop": true,
-    "outDir": "./dist",
+    "outDir": "extension/dist",
     "sourceMap": true
   },
-  "include": ["src/**/*"]
+  "include": ["./src/**/*"]
 }
